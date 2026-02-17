@@ -1,0 +1,19 @@
+# Custom Player – dependencies
+# Pi Zero 2 W (512 MB RAM) – keep it lean!
+
+# ── Core UI ──────────────────────────────────────────────────────────────────
+PyQt5>=5.15.0          # OR: PySide6 (heavier, but same API surface)
+
+# ── Mopidy / MPD connection ───────────────────────────────────────────────────
+python-mpd2>=3.0.0     # MPD protocol client for Mopidy
+
+# ── Moonraker / Klipper HTTP polling ─────────────────────────────────────────
+requests>=2.28.0
+
+# ── Optional: real hardware input (Phase 2) ──────────────────────────────────
+# evdev>=1.6.0          # Read GPIO buttons / rotary encoder via /dev/input
+# gpiozero>=1.6.0       # High-level GPIO abstraction (alternative to evdev)
+# RPi.GPIO>=0.7.0       # Low-level GPIO (if gpiozero not available)
+
+# ── Dev / test extras (desktop only) ─────────────────────────────────────────
+# pynput>=1.7.0         # Alternative keyboard capture (not needed; we use Qt events)
